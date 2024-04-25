@@ -1,40 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+|  | Pemrograman Berbasis Framework 2024 |
+|--|--|
+| NIM |  2341728027|
+| Nama |  Andi Fadhil Akbar Syahbana |
+| Kelas | TI - 3A |
 
-## Getting Started
+Praktikum 1
 
-First, run the development server:
+Pada file pages yang dibuat sesuai pada soal terdapat beberapa yang perlu di ubah sehingga menampilkan hasil nya.
+ button tersebut ketika diklik akan mengeluarkan tampilan berikut 
+![week4](image/week%206,%201.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Praktikum 2
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+selanjutnya pada halaman login menggunakan redux, dengan mengklik tombol login maka akan ditampilkan seperti ini :
+![week4](image/week%206,%202.png)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+lalu jika parse yang dihapus maka hanya akan menampilkan button login saja 
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+![week4](image/week%206,%203.png)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Praktikum 3 
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+pada counter naik turun yang telah dibuat, kita dapat mengklik plus dan minus untuk melihat apakah counter dapat berjalan
 
-## Learn More
+![week4](image/week%206,%204.png)
 
-To learn more about Next.js, take a look at the following resources:
+Soal :
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Apa kegunaan dari kode ini import { useEffect } from "react"; Pada file pages/_app.tsx? jelaskan
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+useEffect adalah hooks yang digunakan untuk melakukan side effect pada functional component, sehingga useEffect akan dijalankan setiap kali komponen di render
 
-## Deploy on Vercel
+2. Jika pada file pages/_app.tsx kita tidak menggunakan useEffect (menghapus baris 3, dan baris 9-11, apa yang akan terjadi?
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Jika useEffect dihapus, maka bootstrap tidak akan berjalan karena useEffect digunakan untuk memanggil bootstrap.min.js yang berfungsi untuk menjalankan javascript dari bootstrap. Sehingga bootstrap tidak akan berjalan dan tampilan akan berubah.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+3. Mengapa di react/nextjs penulisan tag html untuk class, harus diganti menjadi className ?
+
+Karena class jika kita menggunakan class pada tag html, maka akan terjadi error. Sehingga kita harus mengganti class menjadi className 
+
+4. Apakah store pada nextjs bisa menyimpan banyak redux reducer?
+Jelaskan kegunaan dari file store.js!
+
+Bisa, dikarenakn store pada nextjs bisa menyimpan banyak redux reducer dimana Redux reducer adalah fungsi yang digunakan untuk mengubah state pada store
+
+5. Pada file pages/login.tsx, apa maksud dari kode ini ?
+
+store.js adalah file yang digunakan untuk membuat store pada nextjs dimana Store ini merupakan tempat penyimpanan state pada nextjs.
+
+6. const { isLogin } = useSelector((state) => state.auth);
+Pada file pages/counter.tsx, apa maksud dari kode ini?
+
+Kode diatas digunakan untuk mengambil state isLogin dari store redux dan useSelector adalah hooks yang digunakan untuk mengambil state dari store redux
+
+7. const {totalCounter} = useSelector((state) => state.counter);
+Pada file pages/counter.tsx, apa maksud dari kode ini?
+
+Kode diatas digunakan untuk mengambil state totalCounter dari store redux dan useSelector adalah hooks yang digunakan untuk mengambil state dari store redux.
